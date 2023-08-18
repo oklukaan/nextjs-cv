@@ -1,0 +1,25 @@
+.columns{
+    gap:10px;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+.information{
+    display: block;
+}
+.slider_picture{
+    height: 450px;
+    background-image: url("https://cdn-images-1.medium.com/max/2400/1*1Fpo1kO-S-SeRgDqpOMa5w.jpeg");
+    background-size: cover;
+}
+
+.blog_text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 500px;
+    padding-bottom: 25px;
+}
+.blog_border{
+    border-bottom: 1px solid gray;
+}
