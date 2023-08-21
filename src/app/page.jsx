@@ -45,8 +45,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
 
-      <div className={styles.main}>
-        <div className='width-50'>
+      <div className={`${styles.main} flex-sm-reverse`}>
+        <div className='col-md-6 col-lg-6 col-sm-10 col-10'>
           <div className='d-flex justify-content-center flex-direction-column gap-15'>
             <span className='pt-10 pb-10'>Welcome to my portfolio website!</span>
             <h2>Hey folks, Im Kaan Okluçam </h2>
@@ -56,7 +56,7 @@ export default function Home() {
             <h4>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</h4>
           </div>
         </div>
-        <div>
+        <div className='col-md-6 col-lg-6 col-sm-10 col-10'>
           <Image src='/mes.svg' width={400} height={400} alt='banner görsel' />
         </div>
       </div>

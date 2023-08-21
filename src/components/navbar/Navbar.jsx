@@ -1,9 +1,11 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import React,{useState} from 'react'
 
 import style from './navbar.module.css'
 import Darkmode from '../darkmode/Darkmode'
+import MobileNavbar from './MobileNavbar';
+
 
 const Navbar = () => {
 
@@ -39,8 +41,16 @@ const Navbar = () => {
     console.log('tiklandi')
   }
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className={style.container} >
+    <>
+      <div className={`${style.container} d-none  d-md-flex`}>
       <Link href='/' className={style.logo}>Kaan Blog</Link>
       <div className={style.links}>
         <Darkmode/>
@@ -48,8 +58,12 @@ const Navbar = () => {
           <Link href={link.url} key={link.id}>{link.title}</Link>
         ))}
         <button onClick={changeLogout} className={style.logout}>Logout</button>
+      
       </div>
-    </div>
+      </div>
+      <button onClick={toggleMenu} className="menu-button d-md-none">☰</button>
+      <MobileNavbar  isOpen={menuOpen} myLinks={links}/>
+      </>
   )
 }
 
