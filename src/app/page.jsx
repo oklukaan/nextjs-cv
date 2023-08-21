@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </div>
         <div className='col-md-6 col-lg-6 col-sm-10 col-10'>
-          <Image src='/mes.svg' width={400} height={400} alt='banner görsel' />
+          <Image src='/mes.svg' width={300} height={400} alt='banner görsel' />
         </div>
       </div>
 

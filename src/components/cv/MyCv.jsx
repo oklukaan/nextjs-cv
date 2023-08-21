@@ -10,10 +10,10 @@ const MyCv = () => {
       }, []);
     return (
       
-        <section id="content-body" className="container animated fadeInUp">
+        <section id="content-body" className="containers animated fadeInUp">
               {domLoaded &&  ( 
             <div className="row" id="intro">
-                <div className="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-1 resume-container">
+                <div className="col-md-12 col-sm-12 col-lg-10 col-md-offset-2 col-sm-offset-1 resume-container">
                     <div className="row">
                         <div className="header-buttons col-md-10 col-md-offset-1">
                             <a href="/my_kaan_cv.pdf" target="_blank" className="btn btn-default btn-top-resume"><Image alt='Dowload image' className='seri' src="/download.png" width={20} height={20} />
