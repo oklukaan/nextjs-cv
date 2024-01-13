@@ -22,7 +22,10 @@ const MyCv = () => {
                                 </a>
                                 <a href="mailto:kaan.oklu06@gmail.com" className="btn btn-default btn-top-message">
                                     <Image alt='mail image' className='seri' src="/mail.png" width={20} height={20} />
-                                    <span className="btn-hide-text"> Email gönder</span></a></div> </div>   <div className="profile-intro row">  <div className="col-md-4 profile-col">  <div className="profile-pic"> <div className="profile-border">
+                                    <span className="btn-hide-text"> Email gönder</span></a></div> </div>  
+                                     <div className="profile-intro row"> 
+                                      <div className="col-md-4 profile-col"> 
+                                      <div className="profile-pic"> <div className="profile-border">
                                         <img src="my_picture.jpg" alt="personel picture" />
                                     </div>
                                     </div>
@@ -31,7 +34,8 @@ const MyCv = () => {
                                 <h1 className="intro-title1">
                                     Merhaba, ben
                                     <span className="color1 bold"> Kaan!</span></h1>
-                                <h2 className="intro-title2">Front-end Dev. / Shopify Dev. / Yazılım Mühendisi</h2>   <p><strong>Burdur Mehmet Akif Ersoy Üniversitesi Yönetim Bilişim Sistemleri</strong> bölümünden mezunum, <strong>NodeJs</strong>, <strong>React</strong> ve <strong>Web Geliştirme</strong> ile uğraşmayı seven yazılım mühendisiyim. Şu an <strong>Piernet</strong>&apos;de <strong>Front-end Developer</strong> olarak çalışıyorum.</p><p> Okurum, öğrenirim,  kod yazarım .</p>
+                                <h2 className="intro-title2">Front-end Dev. / Shopify Dev. / Yazılım Mühendisi</h2>  
+                                 <p><strong>Burdur Mehmet Akif Ersoy Üniversitesi Yönetim Bilişim Sistemleri</strong> bölümünden mezunum, <strong>NodeJs</strong>, <strong>React</strong> ve <strong>Web Geliştirme</strong> ile uğraşmayı seven yazılım mühendisiyim. Şu an <strong>Piernet</strong>&apos;de <strong>Front-end Developer</strong> olarak çalışıyorum.</p><p> Okurum, öğrenirim,  kod yazarım .</p>
                             </div>
                         </div>
                         <div className="timeline-wrap">
