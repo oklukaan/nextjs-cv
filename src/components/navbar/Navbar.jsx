@@ -9,6 +9,7 @@ import MobileNavbar from './MobileNavbar';
 
 const Navbar = () => {
 
+  console.log("test");
   const links=[
     {
       id:1,
