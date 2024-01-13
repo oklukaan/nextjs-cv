@@ -12,7 +12,7 @@ const MyCv = () => {
 
         <section id="content-body" className="containers animated fadeInUp">
             {domLoaded && (
-                <div className="row justify-center" id="intro">
+                <div className="row justify-content-center" id="intro">
                     <div className="col-md-12 col-sm-12 col-lg-10 col-md-offset-2 col-sm-offset-1 resume-container">
                         <div className="row">
                             <div className="header-buttons col-md-10 col-md-offset-1">
