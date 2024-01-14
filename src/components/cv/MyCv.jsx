@@ -39,7 +39,7 @@ const MyCv = () => {
                             </div>
                         </div>
                         <div className="timeline-wrap">
-                            <div className="timeline-bg">  <section className="timeline profile-infos">
+                            <div className="timeline-bg">  <section className="timeline profile-infos mobile-padd">
                                 <div className="line row timeline-margin">
                                     <div className="content-wrap">
                                         <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />

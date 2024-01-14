@@ -186,3 +186,11 @@ a{
   
   
 /*mobile menu */
+
+
+@media screen and (max-width:768px) {
+    .mobile-padd{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

@@ -16,7 +16,7 @@ const roboto = Roboto({
 
 
 export const metadata = {
-  title: 'Kaan Okluçam s',
+  title: 'Kaan Okluçam',
   description: 'Kaan Okluçam Cv',
 }
 
