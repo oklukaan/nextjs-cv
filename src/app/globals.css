@@ -201,3 +201,9 @@ a{
         padding-left: 15px;
     }
 }
+.sr-only{
+    text-align: right;
+    width: 95%;
+    color: white;
+    display: block;
+}
