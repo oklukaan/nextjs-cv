@@ -193,4 +193,11 @@ a{
         padding-right: 15px;
         padding-left: 15px;
     }
+    #footer{
+        margin-top: 0 !important;
+    }
+    .timeline{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
