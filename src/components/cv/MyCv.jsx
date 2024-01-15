@@ -2,33 +2,34 @@ import React from 'react'
 import '../cv/style.css'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import Skil from '../skils/Skil';
+import SkilMain from '../skils/SkilMain';
 const MyCv = () => {
     const [domLoaded, setDomLoaded] = useState(false);
     useEffect(() => {
         setDomLoaded(true);
     }, []);
 
-
-    const mySkills = [
-        "Java tabanlı web uygulamaları, (Spring, Play!, JSF desteği ile)",
-        "SOAP, RESTful web servis tasarımı",
-        "GWT + Swing ile masaüstü uygulamaları",
-        "Pek çok tasarım deseni kullanarak katmanlı mimari tasarımı",
-        "Asenkron multithread uygulamalar",
-        "Maven, ANT, Grails"
-      ];
-    const cSharpSkills = [
-        "Windows Forms ile masaüstü uygulamaları,",
-        "TCP/IP, Soket uygulamaları,",
-        "Entity Framework ve web servisler kullanılarak otomasyon sistemlerinin hazırlanması."
-    ]
-
-    const nodeJsSkilss = [
-        "Express Js Kullanımı",
-        "Veri Tabanı bağlantısı",
-        "Framework backend servisleri ve ön yüz templeteleri oluşturulması."
-    ]
+    const mySkills = {
+        javaSkills: [
+          "Java tabanlı web uygulamaları, (Spring, Play!, JSF desteği ile)",
+          "SOAP, RESTful web servis tasarımı",
+          "GWT + Swing ile masaüstü uygulamaları",
+          "Pek çok tasarım deseni kullanarak katmanlı mimari tasarımı",
+          "Asenkron multithread uygulamalar",
+          "Maven, ANT, Grails"
+        ],
+        cSharpSkills: [
+          "Windows Forms ile masaüstü uygulamaları,",
+          "TCP/IP, Soket uygulamaları,",
+          "Entity Framework ve web servisler kullanılarak otomasyon sistemlerinin hazırlanması."
+        ],
+        nodeJsSkills: [
+          "Express Js Kullanımı",
+          "Veri Tabanı bağlantısı",
+          "Framework backend servisleri ve ön yüz templeteleri oluşturulması."
+        ]
+      };
+    
 
     return (
 
@@ -176,33 +177,28 @@ const MyCv = () => {
                                                                                  <li><strong>2011</strong> : TEGV’den gelen katılımcılara internet ve web teknolojileri eğitimi verdim.</li>
                                                                                  <li><strong>2012</strong> : OBSS’nin düzenlediği Ege Üniversitesi Java Roadshow yarışmasında birincisi oldum.</li> 
                                                                                  </ul> </div></div> </div>   
-                                                                                 <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div></section>   
+                                                                                 <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>
+                                                                                 </section>   
                                                                                  <section className="timeline skills" id="skills">  
                                                                                  <div className="line row timeline-margin">
                                                                                      <div className="content-wrap"> 
                                                                                      <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
                                                                                      <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height" /> 
-                                                                                     <div className="col-md-9 bg1 full-height" /> </div> </div>   
+                                                                                     <div className="col-md-9 bg1 full-height" /> 
+                                                                                     </div> 
+                                                                                     </div>   
+
                                                                                      <div className="line row">  
-                                                                                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                                     <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />  
-                                                                                     <div className="col-md-8 content-wrap bg1">  
-                                                                                     <h2 className="section-title">TEKNİK BECERİLER</h2></div>  
-                                                                                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   
-                                                                                     <div className="line row">  
-                                                                                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                                     <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   
-                                                            <div className="col-md-8 content-wrap bg1"> 
-                                                                <div className="line-content"> 
-                                                                <h3 className="section-item-title-1">PROGRAMLAMA DİLLER</h3>  
-                                                                    <ul className="skills-list"> 
-                                                                    <Skil skilName="Java" wid='40' percant='40' skills={mySkills } color=""/>
-                                                                    <Skil skilName="C#" wid='45' percant='45' skills={cSharpSkills} color ="2"/>
-                                                                    <Skil skilName="NodeJs" wid='60' percant='60' skills={nodeJsSkilss} color ="3"/>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>  
-                                                                            <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>  
+                                                                                        <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
+                                                                                        <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />  
+                                                                                            <div className="col-md-8 content-wrap bg1">  
+                                                                                                <h2 className="section-title">TEKNİK BECERİLER</h2>
+                                                                                            </div>  
+                                                                                        <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />
+                                                                                     </div>
+
+                                                                                     <SkilMain skills={mySkills}/>
+
                                                                              <div className="line row">  
                                                                              <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />
                                                                              <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   
