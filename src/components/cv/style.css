@@ -972,6 +972,7 @@
   }
   
   ul.skill-usage{
+      margin-top: -20px;
       padding-left: 35px;
       font-size: 14px;
       padding-bottom: 10px;
@@ -980,7 +981,7 @@
   
   ul.neler-yaptim{
     font-size: 14px;
-    list-style-type: none;
+    list-style-type: circle;
   }
   
   .job-list {
