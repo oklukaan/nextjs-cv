@@ -48,23 +48,23 @@ export default function Home() {
       <div className={`${styles.main} flex-sm-reverse`}>
         <div className='col-md-6 col-lg-6 col-sm-10 col-10'>
           <div className='d-flex justify-content-center flex-direction-column gap-15'>
-            <span className='pt-10 pb-10'>Welcome to my portfolio website!</span>
-            <h2>Hey folks, Im Kaan Okluçam </h2>
+            <span className='pt-10 pb-10'>Portfolyo web siteme hoş geldiniz!</span>
             <marquee className='font-orange' scrollamount="10" height="50" width="60%" direction="right">
               Software Developer
             </marquee>
-            <h4>Building a successful product is a challenge. I am highly energetic in user experience design, interfaces and web development.</h4>
+            <h4>
+Başarılı bir ürün geliştirmek oldukça zorlu bir süreçtir. Kullanıcı deneyimi tasarımı, arayüzler ve web geliştirme konularında büyük bir enerjiye sahibim.</h4>
           </div>
         </div>
         <div className='col-md-6 col-lg-6 col-sm-10 col-10'>
           <Image src='/mes.svg' width={300} height={400} alt='banner görsel' />
         </div>
       </div>
-
+{/* 
       <div className={`${styles.container_three}`}>
         <h2 className={styles.font_weight_bold}>My Experiences</h2>
       </div>
-
+ 
       <div className={styles.main}>
 
 
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
 
       </div>
-     
+  
       <div className={styles.container_two}>
 
         {selectedMilestone && (
@@ -110,7 +110,7 @@ export default function Home() {
           </motion.div>
         )}
       </div>
-
+   */}
     <MyCv/>
     </div>
   )
