@@ -2,14 +2,15 @@ import React from 'react'
 import '../cv/style.css'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import Skil from '../skils/Skil';
+import SkillList from '../skils/SkillList';
+import Projects from '../project/Projects';
 const MyCv = () => {
     const [domLoaded, setDomLoaded] = useState(false);
     useEffect(() => {
         setDomLoaded(true);
     }, []);
 
-
+ 
     const mySkills = [
         "Java tabanlı web uygulamaları, (Spring, Play!, JSF desteği ile)",
         "SOAP, RESTful web servis tasarımı",
@@ -29,6 +30,114 @@ const MyCv = () => {
         "Veri Tabanı bağlantısı",
         "Framework backend servisleri ve ön yüz templeteleri oluşturulması."
     ]
+
+    const htmlCss = [
+        "Bootstrap, LESS gibi güncel araç tecrübesi",
+        "Kullanıcı deneyimi bilgisi.",
+        "Responsive Tasarım"
+
+    ]
+    const JavaScript = [
+        "Scope kavramına hakimlik, object oriented tasarımlar</li>", 
+        "jQuery ile DOM yönetimi, dinamik tasarımlar",
+        "Vanilya JavaScript Hakimiyeti",
+        "ReactJS, NextJs Framework kullanımı",
+        "NodeJS ile küçük uğraşılar."
+    ]
+    const Php =[
+        "OO Php uygulamaları",
+        "Wordpress Php Geliştirmeleri"
+    ]
+    const mySql=[
+        "Popüler CMS'lerin MySql kullanımı, yönetimi hakkında tecrübe sahipliği",
+        "Database güvenliği ve data yedekleme konusunda tecrübe sahipliği."
+    ]
+
+    const mongoDb=[
+        "Lokasyon tabanlı indexler ve arama hakkında tecrübe sahibi",
+        "Node js MongoDb Veri tabanı bağlantısı",
+        "MongoDB ile ilişkisel bir veri tabanınınin birlikte yönetimi hakkında bilgi sahibi."
+    ]
+
+    const linuxSystem = [
+        "Kullanıcı yönetimi tecrübesi",
+        "Paket yöneticisi uygulamaları kullanım bilgisi",
+        "Temel düzey kernel bilgisi."
+    ]
+    const windowsSystem = [
+        "IIS service hakkında bilgi sahipliği",
+        "Temel düzel Active Directory bilgisi."
+    ]
+    const wordpress = [
+        "2 Yılı Aşkın Wordpress web site tasarımı",
+        "Wordpress Orta Düzey Olan Eklentilere Hakimlik",
+        "Elementor Kullanımı",
+        "Temel Düzeyde Kod tarafında Php Kullanımı",
+        
+    ]
+    const wixVelo=[
+        "2-3 Yıl arası Wix Web Site Tasarımı",
+        "İleri Düzeyde Wix Velo Kullanımı",
+        "Data set ve wix veritabanı hakimiyeti",
+        "Api servis ve wix paket yönetimi",
+        "Eklenti Geliştirmesi"
+    ]
+
+    const shopify=[
+        "2 Yıl aşkın Süreder Shopif Web Site Tasarımı",
+        "İleri Düzey Liquid Bilgisi",
+        "İlerisi düzey Schema(veritabanı) Ve Shopify Kullanım Bilgisi",
+        "İleri Düzey Tema Geliştirme"
+    ]
+
+    const mySkillsData = [
+        {
+          title: 'PROGRAMLAMA DİLLERİ',
+          skills: [
+            {skilName: 'Java', wid: '40', percant: '40', skills: mySkills, color: '' },
+            {skilName: 'C#', wid: '45', percant: '45', skills: cSharpSkills , color: '2'},
+            {skilName: 'NodeJs', wid: '60', percant: '60', skills: nodeJsSkilss , color: '3'},
+            // Diğer beceriler...
+          ],
+        },
+        {
+          title: 'WEB TEKNOLOJİLERİ / SCRIPTING DİLLERİ',
+          skills: [
+            { skilName: 'Html/Css', wid: '90', percant: '90', skills: htmlCss, color: '' },
+            { skilName: 'JavaScript', wid: '85', percant: '85', skills: JavaScript, color: '2' },
+            { skilName: 'PHP', wid: '40', percant: '40', skills: Php, color: '3' }
+            // Diğer beceriler...
+          ],
+        },
+        {
+            title: 'VERİTABANI YÖNETİMİ / KULLANIMI',
+            skills: [
+              { skilName: 'MsSql', wid: '40', percant: '40', skills: mySql, color: '' },
+              { skilName: 'MongoDB', wid: '60', percant: '60', skills: mongoDb, color: '2' }
+              // Diğer beceriler...
+            ],
+        },
+        {
+            title: 'İŞLETİM SİSTEMLERİ / UYGULAMA SUNUCULARI',
+            skills: [
+              { skilName: 'LINUX (Ubuntu)', wid: '25', percant: '35', skills: linuxSystem, color: '' },
+              { skilName: 'Windows (Server 2008, Server 2012)', wid: '40', percant: '35', skills: windowsSystem, color: '2' }
+              // Diğer beceriler...
+            ],
+        },
+        {
+            title: 'YARDIMCI PROGRAMLAR / DİĞER YAZILIMLAR',
+            skills: [
+              { skilName: 'Wordpress', wid: '80', percant: '80', skills: wordpress, color: '' },
+              { skilName: 'Wix / WixVelo', wid: '90', percant: '90', skills: wixVelo, color: '2' },
+              { skilName: 'Shopify / Shopify Theme Development', wid: '95', percant: '95', skills: shopify, color: '3' },
+
+              
+              // Diğer beceriler...
+            ],
+        },
+        // Diğer kategoriler...
+      ];
 
     return (
 
@@ -57,7 +166,7 @@ const MyCv = () => {
                                     Merhaba, ben
                                     <span className="color1 bold"> Kaan!</span></h1>
                                 <h2 className="intro-title2">Front-end Dev. / Shopify Dev. / Yazılım Mühendisi</h2>  
-                                 <p><strong>Burdur Mehmet Akif Ersoy Üniversitesi Yönetim Bilişim Sistemleri</strong> bölümünden mezunum, <strong>NodeJs</strong>, <strong>React</strong> ve <strong>Web Geliştirme</strong> ile uğraşmayı seven yazılım mühendisiyim. Şu an <strong>Piernet</strong>&apos;de <strong>Front-end Developer</strong> olarak çalışıyorum.</p><p> Okurum, öğrenirim,  kod yazarım .</p>
+                                 <p><strong>Burdur Mehmet Akif Ersoy Üniversitesi Yönetim Bilişim Sistemleri</strong> bölümünden mezunum, <strong>NodeJs</strong>, <strong>React</strong> ve <strong>Web Geliştirme</strong> ile uğraşmayı seven bir yazılımcıyım. Şu an <strong>Piernet</strong>&apos;de <strong>Front-end Developer</strong> olarak çalışıyorum.</p><p> Okurum, öğrenirim,  kod yazarım .</p>
                             </div>
                         </div>
                         <div className="timeline-wrap">
@@ -149,96 +258,36 @@ const MyCv = () => {
                                                                         </div>   
                                                                         <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>
                                                                         </section>   
-                                                                        <section className="timeline work-experience" id="projects-and-others">  
-                                                                        <div className="line row timeline-margin"> 
-                                                                        <div className="content-wrap"> 
-                                                                        <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                        <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height" /> 
-                                                                        <div className="col-md-9 bg1 full-height" /> </div> </div>   
-                                                                        <div className="line row">  
-                                                                        <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />
-                                                                         <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />   
-                                                                         <div className="col-md-8 content-wrap bg1">  
-                                                                         <h2 className="section-title">Projelerim</h2></div>
-                                                                            <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   
-                                                                            <div className="line row"> 
-                                                                             <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                             <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-work " />   
-                                                                             <div className="col-md-8 content-wrap bg1"> 
-                                                                             <div className="line-content line-content-education"> 
-                                                                             <div className="job-description"> 
-                                                                             <ul className="neler-yaptim">
-                                                                                 <li><strong>1999</strong> : Henüz 8 yaşındayken bilgisayar operatörlüğü belgemi aldım.</li> 
-                                                                                 <li><strong>2006</strong> : 100 saatlik web tasarım/programlama eğitimi aldım.</li> 
-                                                                                 <li><strong>2009</strong> : TÜBİTAK proje yarışmasına katıldığım bilgisayar projesi ile AFLİVA birincilik ödülü aldım.</li> 
-                                                                                 <li><strong>2010</strong> : ODTÜ’de düzenlenen UPEM’e katıldım, yarışmada Ege Üniversitesini temsil ettim.</li> 
-                                                                                 <li><strong>2010 – 2011</strong> : Ege Üniversitesi Bilgisayar Mühendisliği bünyesinde Photoshop eğitimi verdim.</li> 
-                                                                                 <li><strong>2011</strong> : TEGV’den gelen katılımcılara internet ve web teknolojileri eğitimi verdim.</li>
-                                                                                 <li><strong>2012</strong> : OBSS’nin düzenlediği Ege Üniversitesi Java Roadshow yarışmasında birincisi oldum.</li> 
-                                                                                 </ul> </div></div> </div>   
-                                                                                 <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div></section>   
-                                                                                 <section className="timeline skills" id="skills">  
-                                                                                 <div className="line row timeline-margin">
-                                                                                     <div className="content-wrap"> 
-                                                                                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                                     <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height" /> 
-                                                                                     <div className="col-md-9 bg1 full-height" /> </div> </div>   
-                                                                                     <div className="line row">  
-                                                                                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
-                                                                                     <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />  
-                                                                                     <div className="col-md-8 content-wrap bg1">  <h2 className="section-title">TEKNİK BECERİLER</h2></div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   
-                                                            <div className="col-md-8 content-wrap bg1"> 
-                                                                <div className="line-content"> 
-                                                                <h3 className="section-item-title-1">PROGRAMLAMA DİLLER</h3>  
-                                                                    <ul className="skills-list"> 
-                                                                    <Skil skilName="Java" wid='40' percant='40' skills={mySkills } color=""/>
-                                                                    <Skil skilName="C#" wid='45' percant='45' skills={cSharpSkills} color ="2"/>
-                                                                    <Skil skilName="NodeJs" wid='60' percant='60' skills={nodeJsSkilss} color ="3"/>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>  
-                                                                            <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">WEB TEKNOLOJİLERİ / SCRIPTING DİLLERİ</h3>   
-                                                                            <ul className="skills-list">  
-                                                                            <li> 
-                                                                                <div className="progress">
-                                                                                     <div className="progress-bar" data-percent="85%" role="progressbar" style={{ width: '85%' }}>
-                                                                                         <span className="sr-only">85% Complete</span> 
-                                                                                    </div>
-                                                                                     <span className="progress-type">HTML / CSS</span> 
-                                                                                     <span className="progress-completed">85%</span> 
-                                                                                </div> 
-                                                                                <ul className="skill-usage"> 
-                                                                                <li>Div tabanlı responsive tasarımlar,</li>
-                                                                                 <li>Bootstrap, LESS gibi güncel araç tecrübesi,</li>
-                                                                                  <li>Kullanıcı deneyimi bilgisi.</li> 
-                                                                                </ul> 
-                                                                            </li>   
-                                                                            <li> 
-                                                                                <div className="progress">
-                                                                                     <div className="progress-bar progress-bar-2" data-percent="80%" role="progressbar" style={{ width: '80%' }}> 
-                                                                                     <span className="sr-only">80% Complete</span> 
-                                                                                </div>
-                                                                                 <span className="progress-type">JavaScript</span> 
-                                                                                 <span className="progress-completed">80%</span> 
-                                                                            </div> 
-                                                                            <ul className="skill-usage">
-                                                                                 <li>Scope kavramına hakimlik, object oriented tasarımlar,</li> <li>jQuery ile DOM yönetimi, dinamik tasarımlar,</li> <li>AngularJS MVW kütüphanesi kullanımı,</li> <li>NodeJS ile küçük uğraşılar.</li> </ul> </li>   <li> <div className="progress"> <div className="progress-bar progress-bar-3" data-percent="70%" role="progressbar" style={{ width: '70%' }}> <span className="sr-only">70% Complete</span> </div> <span className="progress-type">PHP</span> <span className="progress-completed">70%</span> </div> <ul className="skill-usage"> <li>OO Php uygulamaları,</li> <li>Wordpress, Drupal, Joomla gibi CMS&apos;ler ve PhpBB,SMF,vBulletin gibi forum uygular hakkında plugin geliştirebilecek seviyede bilgi sahipliği.</li> <li>Admin paneli uygulamaları geliştirilmesi,</li> <li>Data toplama amaçlı scriptler.</li> </ul> </li></ul></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">VERİTABANI YÖNETİMİ / KULLANIMI</h3>  
-                                                                                  <ul className="skills-list"> 
-                                                                                     <li>
-                                                                                         <div className="progress"> 
-                                                                                         <div className="progress-bar progress-bar-2" data-percent="60%" role="progressbar" style={{ width: '44%' }}>
-                                                                <span className="sr-only">40% Complete</span>
-                                                            </div>
-                                                             <span className="progress-type">MySql</span> 
-                                                             <span className="progress-completed">40%</span> 
-                                                             </div> 
-                                                             <ul className="skill-usage">
-                                                               <li>Popüler CMS&apos;lerin MySql kullanımı, yönetimi hakkında tecrübe sahipliği,</li> 
-                                                               <li>Database güvenliği ve data yedekleme konusunda tecrübe sahipliği.</li>
-                                                             </ul> 
-                                                                </li> 
-                                                                <li> <div className="progress"> <div className="progress-bar" data-percent="40%" role="progressbar" style={{ width: '40%' }}> <span className="sr-only">40% Complete</span> </div> <span className="progress-type">MongoDB</span> <span className="progress-completed">40%</span> </div> <ul className="skill-usage"> <li>Doküman tabanlı veri modelleme yetisi,</li> <li>Lokasyon tabanlı indexler ve arama hakkında tecrübe sahibi,</li> <li>MongoDB ile ilişkisel bir veri tabanınınin birlikte yönetimi hakkında bilgi sahibi.</li> </ul> </li>   <li> <div className="progress"> <div className="progress-bar progress-bar-2" data-percent="30%" role="progressbar" style={{ width: '30%' }}> <span className="sr-only">30% Complete</span> </div> <span className="progress-type">PostgreSQL</span> <span className="progress-completed">30%</span> </div> <ul className="skill-usage"> <li>Temel ihtiyaçlar için kullanım,</li> <li>Entity Framework ile entegrasyon hakkında tecrübe sahibi.</li> </ul> </li></ul></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">İŞLETİM SİSTEMLERİ / UYGULAMA SUNUCULARI</h3>   <ul className="skills-list">  <li> <div className="progress"> <div className="progress-bar progress-bar-3" data-percent="80%" role="progressbar" style={{ width: '80%' }}> <span className="sr-only">80% Complete</span> </div> <span className="progress-type">LINUX (Ubuntu, CentOS, Solaris)</span> <span className="progress-completed">80%</span> </div> <ul className="skill-usage"> <li>Kullanıcı yönetimi tecrübesi,</li> <li>Paket yöneticisi uygulamaları kullanım bilgisi,</li> <li>*NIX / Bash komutlarına hakimlik,</li> <li>Apache uygulama sunucusu yönetimi tecrübesi,</li> <li>Temel düzey kernel bilgisi.</li> </ul> </li>   <li> <div className="progress"> <div className="progress-bar progress-bar-2" data-percent="60%" role="progressbar" style={{ width: '60%' }}> <span className="sr-only">60% Complete</span> </div> <span className="progress-type">Windows (Server 2008, Server 2012)</span> <span className="progress-completed">60%</span> </div> <ul className="skill-usage"> <li>IIS service hakkında bilgi sahipliği,</li> <li>MSDOS komutlarına hakimlik,</li> <li>Temel düzel Active Directory bilgisi.</li> </ul> </li></ul></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">YARDIMCI PROGRAMLAR / ARAÇLAR</h3>   <ul className="skills-list">  <li> <div className="progress"> <div className="progress-bar progress-bar-2" data-percent="70%" role="progressbar" style={{ width: '70%' }}> <span className="sr-only">70% Complete</span> </div> <span className="progress-type">Adobe Photoshop</span> <span className="progress-completed">70%</span> </div> <ul className="skill-usage"> <li>İki yıl Photoshop eğitmenliği tecrübesi</li> </ul> </li>   <li> <div className="progress"> <div className="progress-bar progress-bar-3" data-percent="60%" role="progressbar" style={{ width: '60%' }}> <span className="sr-only">60% Complete</span> </div> <span className="progress-type">Eclipse IDE</span> <span className="progress-completed">60%</span> </div> <ul className="skill-usage"> <li>Plug-in development bilgi sahipliği,</li> <li>Eclipse JAVA için pek çok kısayola hakimlik.</li> </ul> </li></ul></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div></section>   <section className="timeline" id="interests">  <div className="line row timeline-margin"> <div className="content-wrap"> <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height" /> <div className="col-md-9 bg1 full-height" /> </div> </div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />   <div className="col-md-8 content-wrap bg1">  <h2 className="section-title">İLGİ ALANLARI</h2></div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">ALGORİTMALAR</h3>   <p>Lise yıllarından beridir algoritmalara ve zeka sorularına meraklıyım. Özellikle çözülmesi zor problemler için, saatlerimi de harcayacak olsam bir algoritma geliştiriyor olmak bana zevk verir.</p></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">FELSEFE</h3>   <p>İlk çağ felsefesi, mitoloji, insanlık tarihi ve insanların düşünme biçimleri üzerine meraklıyımdır. Bertrand Russell, Friedrich Nietzsche, Oruç Aruoba sevdiğim düşünürlerdendir.</p><p>Düşüncelerim <a href="http://tr.wikipedia.org/wiki/Analitik_felsefe" target="_blank" rel="nofollow">analitik</a> ve <a href="http://tr.wikipedia.org/wiki/Varolu%C5%9F%C3%A7uluk" target="_blank" rel="nofollow">varoluşçu</a> felsefeye daha yakındır.</p></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div></section>
-                            </div> </div>   <footer id="footer" className="row">  <p className="quote">“Bir kişinin kendisine verdiği zararı başka hiç kimse veremez.”</p></footer></div>
+                                                                        <Projects/>
+                                                                             
+                                                                
+                                                                <section className="timeline" id="interests">  
+                                                                <div className="line row timeline-margin"> 
+                                                                <div className="content-wrap"> 
+                                                                <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> 
+                                                                <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height" />
+                                                                 <div className="col-md-9 bg1 full-height" /> </div> </div>  
+                                                                  <div className="line row"> 
+                                                                   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />
+                                                                    <div className="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height" />  
+                                                                     <div className="col-md-8 content-wrap bg1"> 
+                                                                      <h2 className="section-title">İLGİ ALANLARI</h2></div>  
+                                                                       <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   
+                                                                       <div className="line row">  
+                                                                       <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" />
+                                                                        <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />
+                                                                           <div className="col-md-8 content-wrap bg1"> 
+                                                                           <div className="line-content">  <h3 className="section-item-title-1">ALGORİTMALAR</h3>
+                                                                              <p>Lise yıllarından beridir algoritmalara ve zeka sorularına meraklıyım. Özellikle çözülmesi zor problemler için, saatlerimi de harcayacak olsam bir algoritma geliştiriyor olmak bana zevk verir.</p></div> </div>   <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>   <div className="line row">  <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /> <div className="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point " />   <div className="col-md-8 content-wrap bg1"> <div className="line-content">  <h3 className="section-item-title-1">FELSEFE</h3>   <p>İlk çağ felsefesi, mitoloji, insanlık tarihi ve insanların düşünme biçimleri üzerine meraklıyımdır. Bertrand Russell, Friedrich Nietzsche, Oruç Aruoba sevdiğim düşünürlerdendir.</p>
+                                                                              <p>Düşüncelerim <a href="http://tr.wikipedia.org/wiki/Analitik_felsefe" target="_blank" rel="nofollow">analitik</a> ve 
+                                                                              <a href="http://tr.wikipedia.org/wiki/Varolu%C5%9F%C3%A7uluk" target="_blank" rel="nofollow">varoluşçu</a> 
+                                                                              felsefeye daha yakındır.</p></div> </div>  
+                                                                               <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs" /></div>
+                                                                               
+                                                                               </section>
+                                                                                <SkillList main_title="TEKNİK BECERİLER" skillsData={mySkillsData} />
+
+                            </div> </div>   <footer id="footer" className="row">  <p className="quote">“Hayat, ya yaşanır bir maceradır ya da anlamsız bir bekleyiş. Seçim senin, her anını değerlendirmek senin elinde.”</p></footer></div>
                             
                 </div>
           

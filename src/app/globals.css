@@ -201,3 +201,16 @@ a{
         padding-left: 15px;
     }
 }
+
+.sr-only{
+    color:white;
+    text-align: right;
+    display: block;
+    padding-top: 2px;
+    width: 96%;
+}
+@media screen and  (max-width:768px) {
+    .sr-only{
+        display:none;
+    }
+}
