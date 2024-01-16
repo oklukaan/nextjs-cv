@@ -17,30 +17,13 @@ const Navbar = () => {
       title:"Home",
       url:"/"
     },
-    {
-      id:2,
-      title:"Portfolio",
-      url:"/portfolio"
-    },
-    {
-      id:3,
-      title:"Blog",
-      url:"/blog"
-    },
-    {
-      id:4,
-      title:"About",
-      url:"/about"
-    },
-    {
-      id:5,
-      title:"Dashboard",
-      url:"/dashboard"
-    }
+  
+   
+    
+   
   ]
 
   const changeLogout = () =>{
-    console.log('tiklandi')
   }
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,7 +42,6 @@ const Navbar = () => {
         {links.map(link=>(
           <Link href={link.url} key={link.id}>{link.title}</Link>
         ))}
-        <button onClick={changeLogout} className={style.logout}>Logout</button>
       
       </div>
       </div>
