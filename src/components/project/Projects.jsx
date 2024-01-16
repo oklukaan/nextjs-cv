@@ -25,9 +25,10 @@ const Projects = () => {
                 <div className="line-content line-content-education"> 
                     <div className="job-description"> 
                         <ul className="neler-yaptim">
-                            <li><strong>2020</strong> : 100 saatlik web tasarım/programlama eğitimi aldım.</li> 
-                            <li><strong>2010</strong> : ODTÜ’de düzenlenen UPEM’e katıldım, yarışmada Ege Üniversitesini temsil ettim.</li> 
-                            <li><strong>2011</strong> : TEGV’den gelen katılımcılara internet ve web teknolojileri eğitimi verdim.</li>
+                        <li><a href='https://www.eodakirala.com/'>eodakirala.com</a></li>
+                        <li><a href='https://www.denizphotography.com/'>denizphotography.com</a></li>
+                        <li><a href='https://lesbenjamins.com/'>lesbenjamins.com</a></li>
+                        <li><a href='https://www.moshiqa.com/'>moshiqa.com</a></li>
                         </ul> 
                     </div>
                 </div>
