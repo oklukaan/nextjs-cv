@@ -165,7 +165,7 @@ const MyCv = () => {
                                 <h1 className="intro-title1">
                                     Merhaba, ben
                                     <span className="color1 bold"> Kaan!</span></h1>
-                                <h2 className="intro-title2">Front-end Dev. / Shopify Dev. / Yazılım Mühendisi</h2>  
+                                <h2 className="intro-title2">Front-end Dev. / Shopify Dev. /</h2>  
                                  <p><strong>Burdur Mehmet Akif Ersoy Üniversitesi Yönetim Bilişim Sistemleri</strong> bölümünden mezunum, <strong>NodeJs</strong>, <strong>React</strong> ve <strong>Web Geliştirme</strong> ile uğraşmayı seven bir yazılımcıyım. Şu an <strong>Piernet</strong>&apos;de <strong>Front-end Developer</strong> olarak çalışıyorum.</p><p> Okurum, öğrenirim,  kod yazarım .</p>
                             </div>
                         </div>
